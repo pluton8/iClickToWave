@@ -13,5 +13,12 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet WavesView *wavesView;
+@property (weak, nonatomic) IBOutlet UISlider *numRowsSlider;
+@property (weak, nonatomic) IBOutlet UISlider *numColumnsSlider;
+@property (weak, nonatomic) IBOutlet UISlider *speedSlider;
+
+- (IBAction)numRowsSliderDidChange:(UISlider *)sender;
+- (IBAction)numColumnsSliderDidChange:(UISlider *)sender;
+- (IBAction)speedSliderDidChange:(UISlider *)sender;
 
 @end

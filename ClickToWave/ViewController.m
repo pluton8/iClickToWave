@@ -10,11 +10,11 @@
 #import "Wave.h"
 #import "WavesView.h"
 
-/// Waves speed in number of movements per second.
-static const int kWaveSpeed = 8;
-
 @interface ViewController ()
 
+/// Waves speed in number of movements per second.
+@property (assign, nonatomic) CGFloat wavesSpeed;
+@property (assign, nonatomic) CGSize gridSize;
 @property (strong, nonatomic) NSMutableArray *waves;
 @property (weak, nonatomic) NSTimer *redrawTimer;
 
@@ -49,6 +49,11 @@ static const int kWaveSpeed = 8;
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.gridSize = CGSizeMake(self.numRowsSlider.value,
+                               self.numColumnsSlider.value);
+    self.wavesView.gridSize = self.gridSize;
+    self.wavesSpeed = self.speedSlider.value;
+
     __weak typeof(self) wself = self;
     self.wavesView.cellClickBlock = ^(WavesView *view, CGPoint cell) {
         Wave *newWave = [[Wave alloc] initWithTip:CGPointMake(0, cell.y)
@@ -62,15 +67,7 @@ static const int kWaveSpeed = 8;
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    if (self.redrawTimer) {
-        [self.redrawTimer invalidate];
-    }
-
-    self.redrawTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / kWaveSpeed)
-                                                        target:self
-                                                      selector:@selector(redrawTimerTick:)
-                                                      userInfo:nil
-                                                       repeats:YES];
+    [self restartRedrawTimeWithWavesSpeed:self.wavesSpeed];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -101,6 +98,18 @@ static const int kWaveSpeed = 8;
 
 #pragma mark - Timer
 
+- (void)restartRedrawTimeWithWavesSpeed:(CGFloat)wavesSpeed {
+    if (self.redrawTimer) {
+        [self.redrawTimer invalidate];
+    }
+
+    self.redrawTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / wavesSpeed)
+                                                        target:self
+                                                      selector:@selector(redrawTimerTick:)
+                                                      userInfo:nil
+                                                       repeats:YES];
+}
+
 - (void)redrawTimerTick:(NSTimer *)timer {
     if (self.waves.count <= 0) {
         // nothing to do yet
@@ -114,6 +123,23 @@ static const int kWaveSpeed = 8;
     }
 
     self.wavesView.waves = self.waves;
+}
+
+#pragma mark - IBActions
+
+- (IBAction)numRowsSliderDidChange:(UISlider *)sender {
+    self.gridSize = CGSizeMake(floorf(sender.value), self.gridSize.height);
+    self.wavesView.gridSize = self.gridSize;
+}
+
+- (IBAction)numColumnsSliderDidChange:(UISlider *)sender {
+    self.gridSize = CGSizeMake(self.gridSize.width, floorf(sender.value));
+    self.wavesView.gridSize = self.gridSize;
+}
+
+- (IBAction)speedSliderDidChange:(UISlider *)sender {
+    self.wavesSpeed = sender.value;
+    [self restartRedrawTimeWithWavesSpeed:self.wavesSpeed];
 }
 
 @end
