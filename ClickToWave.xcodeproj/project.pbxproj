@@ -22,6 +22,7 @@
 		14A02C0F183810420074DF64 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14A02C0D183810420074DF64 /* InfoPlist.strings */; };
 		14A02C11183810420074DF64 /* ClickToWaveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A02C10183810420074DF64 /* ClickToWaveTests.m */; };
 		14A02C20183813050074DF64 /* WavesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A02C1F183813050074DF64 /* WavesView.m */; };
+		14A02C241838F36B0074DF64 /* Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A02C231838F36B0074DF64 /* Wave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		14A02C10183810420074DF64 /* ClickToWaveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickToWaveTests.m; sourceTree = "<group>"; };
 		14A02C1E183813050074DF64 /* WavesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavesView.h; sourceTree = "<group>"; };
 		14A02C1F183813050074DF64 /* WavesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WavesView.m; sourceTree = "<group>"; };
+		14A02C221838F36B0074DF64 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
+		14A02C231838F36B0074DF64 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 		14A02BEB183810420074DF64 /* ClickToWave */ = {
 			isa = PBXGroup;
 			children = (
+				14A02C211838F3550074DF64 /* Model */,
 				14A02C1D183813050074DF64 /* View */,
 				14A02BF4183810420074DF64 /* AppDelegate.h */,
 				14A02BF5183810420074DF64 /* AppDelegate.m */,
@@ -163,6 +167,15 @@
 				14A02C1F183813050074DF64 /* WavesView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		14A02C211838F3550074DF64 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14A02C221838F36B0074DF64 /* Wave.h */,
+				14A02C231838F36B0074DF64 /* Wave.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A02C241838F36B0074DF64 /* Wave.m in Sources */,
 				14A02C20183813050074DF64 /* WavesView.m in Sources */,
 				14A02BFC183810420074DF64 /* ViewController.m in Sources */,
 				14A02BF6183810420074DF64 /* AppDelegate.m in Sources */,

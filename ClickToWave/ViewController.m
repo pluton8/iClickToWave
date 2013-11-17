@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Wave.h"
+#import "WavesView.h"
 
 @interface ViewController ()
 
@@ -18,12 +20,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    Wave *w = [[Wave alloc] initWithTip:CGPointMake(0, 5)
+                               andColor:[UIColor yellowColor]];
+    self.wavesView.waves = @[w];
 }
 
 @end

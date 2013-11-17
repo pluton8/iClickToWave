@@ -7,6 +7,7 @@
 //
 
 #import "WavesView.h"
+#import "Wave.h"
 
 @implementation WavesView
 
@@ -32,10 +33,44 @@
     return self;
 }
 
+#pragma mark - Setters & Getters
+
+- (void)setGridSize:(CGSize)gridSize {
+    _gridSize = gridSize;
+    [self setNeedsDisplay];
+}
+
+- (void)setWaves:(NSArray *)waves {
+    _waves = [waves copy];
+    [self setNeedsDisplay];
+}
+
+#pragma mark - Private Methods
+
+- (CGRect)rectForWaveTip:(CGPoint)tip {
+    CGFloat xStep = self.bounds.size.width / self.gridSize.width;
+    CGFloat yStep = self.bounds.size.height / self.gridSize.height;
+    return CGRectMake(xStep * tip.x, yStep * tip.y, xStep, yStep);
+}
+
 #pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect {
+    [self drawWaves:self.waves];
     [self drawGrid:self.gridSize];
+}
+
+- (void)drawWaves:(NSArray *)waves {
+    if (waves.count <= 0) {
+        return;
+    }
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+
+    for (Wave *wave in waves) {
+        [wave.color setFill];
+        CGContextFillRect(ctx, [self rectForWaveTip:wave.tip]);
+    }
 }
 
 - (void)drawGrid:(CGSize)size {

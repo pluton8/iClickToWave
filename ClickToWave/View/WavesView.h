@@ -10,6 +10,9 @@
 
 @interface WavesView : UIView
 
+/// The number of rows and columns of the grid.
 @property (assign, nonatomic) CGSize gridSize;
+/// An array of waves to display. Must contain Wave objects.
+@property (copy, nonatomic) NSArray *waves;
 
 @end
