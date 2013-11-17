@@ -36,23 +36,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14A02BE2183810420074DF64 /* ClickToWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickToWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A02BE2183810420074DF64 /* iClickToWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iClickToWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A02BE5183810420074DF64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14A02BE7183810420074DF64 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14A02BE9183810420074DF64 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		14A02BED183810420074DF64 /* ClickToWave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClickToWave-Info.plist"; sourceTree = "<group>"; };
+		14A02BED183810420074DF64 /* iClickToWave-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iClickToWave-Info.plist"; sourceTree = "<group>"; };
 		14A02BEF183810420074DF64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14A02BF1183810420074DF64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		14A02BF3183810420074DF64 /* ClickToWave-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClickToWave-Prefix.pch"; sourceTree = "<group>"; };
+		14A02BF3183810420074DF64 /* iClickToWave-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iClickToWave-Prefix.pch"; sourceTree = "<group>"; };
 		14A02BF4183810420074DF64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14A02BF5183810420074DF64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14A02BF8183810420074DF64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14A02BFA183810420074DF64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		14A02BFB183810420074DF64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		14A02BFD183810420074DF64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14A02C03183810420074DF64 /* ClickToWaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickToWaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A02C03183810420074DF64 /* iClickToWaveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iClickToWaveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A02C04183810420074DF64 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		14A02C0C183810420074DF64 /* ClickToWaveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClickToWaveTests-Info.plist"; sourceTree = "<group>"; };
+		14A02C0C183810420074DF64 /* iClickToWaveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iClickToWaveTests-Info.plist"; sourceTree = "<group>"; };
 		14A02C0E183810420074DF64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14A02C10183810420074DF64 /* ClickToWaveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickToWaveTests.m; sourceTree = "<group>"; };
 		14A02C1E183813050074DF64 /* WavesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WavesView.h; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				14A02C251839121E0074DF64 /* LICENSE */,
-				14A02BEB183810420074DF64 /* ClickToWave */,
-				14A02C0A183810420074DF64 /* ClickToWaveTests */,
+				14A02BEB183810420074DF64 /* iClickToWave */,
+				14A02C0A183810420074DF64 /* iClickToWaveTests */,
 				14A02BE4183810420074DF64 /* Frameworks */,
 				14A02BE3183810420074DF64 /* Products */,
 			);
@@ -100,8 +100,8 @@
 		14A02BE3183810420074DF64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14A02BE2183810420074DF64 /* ClickToWave.app */,
-				14A02C03183810420074DF64 /* ClickToWaveTests.xctest */,
+				14A02BE2183810420074DF64 /* iClickToWave.app */,
+				14A02C03183810420074DF64 /* iClickToWaveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		14A02BEB183810420074DF64 /* ClickToWave */ = {
+		14A02BEB183810420074DF64 /* iClickToWave */ = {
 			isa = PBXGroup;
 			children = (
 				14A02C211838F3550074DF64 /* Model */,
@@ -130,33 +130,33 @@
 				14A02BFD183810420074DF64 /* Images.xcassets */,
 				14A02BEC183810420074DF64 /* Supporting Files */,
 			);
-			path = ClickToWave;
+			path = iClickToWave;
 			sourceTree = "<group>";
 		};
 		14A02BEC183810420074DF64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				14A02BED183810420074DF64 /* ClickToWave-Info.plist */,
+				14A02BED183810420074DF64 /* iClickToWave-Info.plist */,
 				14A02BEE183810420074DF64 /* InfoPlist.strings */,
 				14A02BF1183810420074DF64 /* main.m */,
-				14A02BF3183810420074DF64 /* ClickToWave-Prefix.pch */,
+				14A02BF3183810420074DF64 /* iClickToWave-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		14A02C0A183810420074DF64 /* ClickToWaveTests */ = {
+		14A02C0A183810420074DF64 /* iClickToWaveTests */ = {
 			isa = PBXGroup;
 			children = (
 				14A02C10183810420074DF64 /* ClickToWaveTests.m */,
 				14A02C0B183810420074DF64 /* Supporting Files */,
 			);
-			path = ClickToWaveTests;
+			path = iClickToWaveTests;
 			sourceTree = "<group>";
 		};
 		14A02C0B183810420074DF64 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				14A02C0C183810420074DF64 /* ClickToWaveTests-Info.plist */,
+				14A02C0C183810420074DF64 /* iClickToWaveTests-Info.plist */,
 				14A02C0D183810420074DF64 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14A02BE1183810420074DF64 /* ClickToWave */ = {
+		14A02BE1183810420074DF64 /* iClickToWave */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14A02C14183810420074DF64 /* Build configuration list for PBXNativeTarget "ClickToWave" */;
+			buildConfigurationList = 14A02C14183810420074DF64 /* Build configuration list for PBXNativeTarget "iClickToWave" */;
 			buildPhases = (
 				14A02BDE183810420074DF64 /* Sources */,
 				14A02BDF183810420074DF64 /* Frameworks */,
@@ -195,14 +195,14 @@
 			);
 			dependencies = (
 			);
-			name = ClickToWave;
+			name = iClickToWave;
 			productName = ClickToWave;
-			productReference = 14A02BE2183810420074DF64 /* ClickToWave.app */;
+			productReference = 14A02BE2183810420074DF64 /* iClickToWave.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14A02C02183810420074DF64 /* ClickToWaveTests */ = {
+		14A02C02183810420074DF64 /* iClickToWaveTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14A02C17183810420074DF64 /* Build configuration list for PBXNativeTarget "ClickToWaveTests" */;
+			buildConfigurationList = 14A02C17183810420074DF64 /* Build configuration list for PBXNativeTarget "iClickToWaveTests" */;
 			buildPhases = (
 				14A02BFF183810420074DF64 /* Sources */,
 				14A02C00183810420074DF64 /* Frameworks */,
@@ -213,9 +213,9 @@
 			dependencies = (
 				14A02C09183810420074DF64 /* PBXTargetDependency */,
 			);
-			name = ClickToWaveTests;
+			name = iClickToWaveTests;
 			productName = ClickToWaveTests;
-			productReference = 14A02C03183810420074DF64 /* ClickToWaveTests.xctest */;
+			productReference = 14A02C03183810420074DF64 /* iClickToWaveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -232,7 +232,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14A02BDD183810420074DF64 /* Build configuration list for PBXProject "ClickToWave" */;
+			buildConfigurationList = 14A02BDD183810420074DF64 /* Build configuration list for PBXProject "iClickToWave" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -245,8 +245,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14A02BE1183810420074DF64 /* ClickToWave */,
-				14A02C02183810420074DF64 /* ClickToWaveTests */,
+				14A02BE1183810420074DF64 /* iClickToWave */,
+				14A02C02183810420074DF64 /* iClickToWaveTests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 /* Begin PBXTargetDependency section */
 		14A02C09183810420074DF64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14A02BE1183810420074DF64 /* ClickToWave */;
+			target = 14A02BE1183810420074DF64 /* iClickToWave */;
 			targetProxy = 14A02C08183810420074DF64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -409,9 +409,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ClickToWave/ClickToWave-Prefix.pch";
-				INFOPLIST_FILE = "ClickToWave/ClickToWave-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "iClickToWave/iClickToWave-Prefix.pch";
+				INFOPLIST_FILE = "iClickToWave/iClickToWave-Info.plist";
+				PRODUCT_NAME = iClickToWave;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -422,9 +422,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ClickToWave/ClickToWave-Prefix.pch";
-				INFOPLIST_FILE = "ClickToWave/ClickToWave-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "iClickToWave/iClickToWave-Prefix.pch";
+				INFOPLIST_FILE = "iClickToWave/iClickToWave-Info.plist";
+				PRODUCT_NAME = iClickToWave;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -433,7 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClickToWave.app/ClickToWave";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iClickToWave.app/iClickToWave";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -445,8 +445,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ClickToWaveTests/ClickToWaveTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ClickToWaveTests/iClickToWaveTests-Info.plist";
+				PRODUCT_NAME = iClickToWaveTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -456,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ClickToWave.app/ClickToWave";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iClickToWave.app/iClickToWave";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -464,8 +464,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ClickToWave/ClickToWave-Prefix.pch";
-				INFOPLIST_FILE = "ClickToWaveTests/ClickToWaveTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ClickToWaveTests/iClickToWaveTests-Info.plist";
+				PRODUCT_NAME = iClickToWaveTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -474,7 +474,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14A02BDD183810420074DF64 /* Build configuration list for PBXProject "ClickToWave" */ = {
+		14A02BDD183810420074DF64 /* Build configuration list for PBXProject "iClickToWave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14A02C12183810420074DF64 /* Debug */,
@@ -483,21 +483,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14A02C14183810420074DF64 /* Build configuration list for PBXNativeTarget "ClickToWave" */ = {
+		14A02C14183810420074DF64 /* Build configuration list for PBXNativeTarget "iClickToWave" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14A02C15183810420074DF64 /* Debug */,
 				14A02C16183810420074DF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		14A02C17183810420074DF64 /* Build configuration list for PBXNativeTarget "ClickToWaveTests" */ = {
+		14A02C17183810420074DF64 /* Build configuration list for PBXNativeTarget "iClickToWaveTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14A02C18183810420074DF64 /* Debug */,
 				14A02C19183810420074DF64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
