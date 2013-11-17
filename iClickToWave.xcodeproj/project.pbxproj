@@ -60,6 +60,7 @@
 		14A02C221838F36B0074DF64 /* Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wave.h; sourceTree = "<group>"; };
 		14A02C231838F36B0074DF64 /* Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wave.m; sourceTree = "<group>"; };
 		14A02C251839121E0074DF64 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		14A02C27183914420074DF64 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		14A02BD9183810420074DF64 = {
 			isa = PBXGroup;
 			children = (
+				14A02C27183914420074DF64 /* README.md */,
 				14A02C251839121E0074DF64 /* LICENSE */,
 				14A02BEB183810420074DF64 /* iClickToWave */,
 				14A02C0A183810420074DF64 /* iClickToWaveTests */,
