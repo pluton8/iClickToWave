@@ -47,10 +47,20 @@
 
 #pragma mark - Private Methods
 
-- (CGRect)rectForWaveTip:(CGPoint)tip {
+/// Builds a path for the wave. It includes the rect for the tip, another higher
+/// rect to the left, and so on.
+- (void)buildPathForWaveWithTip:(CGPoint)tip inCGContext:(CGContextRef)ctx {
     CGFloat xStep = self.bounds.size.width / self.gridSize.width;
     CGFloat yStep = self.bounds.size.height / self.gridSize.height;
-    return CGRectMake(xStep * tip.x, yStep * tip.y, xStep, yStep);
+
+    int height = 1;
+    int y = tip.y;
+    for (int x = tip.x; x >= 0; --x) {
+        CGContextAddRect(ctx,
+                         CGRectMake(xStep * x, yStep * y, xStep, yStep * height));
+        --y;
+        height += 2;
+    }
 }
 
 #pragma mark - Drawing
@@ -69,7 +79,9 @@
 
     for (Wave *wave in waves) {
         [wave.color setFill];
-        CGContextFillRect(ctx, [self rectForWaveTip:wave.tip]);
+
+        [self buildPathForWaveWithTip:wave.tip inCGContext:ctx];
+        CGContextFillPath(ctx);
     }
 }
 
