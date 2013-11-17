@@ -117,6 +117,7 @@
     CGContextSaveGState(ctx);
 
     CGContextSetLineWidth(ctx, 1.0);
+    [[UIColor lightGrayColor] setStroke];
 
     CGFloat xStep = bounds.size.width / size.width;
     for (CGFloat x = 0; x <= bounds.size.width; x += xStep) {
