@@ -9,12 +9,30 @@
 #import "WavesView.h"
 #import "Wave.h"
 
+@interface WavesView ()
+
+@property (weak, nonatomic) UITapGestureRecognizer *tapRecognizer;
+
+@end
+
 @implementation WavesView
 
 #pragma mark - Init
 
+- (void)dealloc {
+    if (self.tapRecognizer) {
+        [self removeGestureRecognizer:self.tapRecognizer];
+        self.tapRecognizer = nil;
+    }
+}
+
 - (void)baseInit {
     _gridSize = CGSizeMake(10, 8);
+
+    UITapGestureRecognizer *tapRec = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                             action:@selector(handleTap:)];
+    _tapRecognizer = tapRec;
+    [self addGestureRecognizer:_tapRecognizer];
 }
 
 - (id)init {
@@ -63,6 +81,13 @@
     }
 }
 
+/// Returns the cell coordinates under the given point on screen.
+- (CGPoint)cellAtPoint:(CGPoint)point {
+    CGFloat xStep = self.bounds.size.width / self.gridSize.width;
+    CGFloat yStep = self.bounds.size.height / self.gridSize.height;
+    return CGPointMake(floorf(point.x / xStep), floorf(point.y / yStep));
+}
+
 #pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect {
@@ -108,6 +133,17 @@
     CGContextStrokePath(ctx);
 
     CGContextRestoreGState(ctx);
+}
+
+#pragma mark - Gesture Recognizers
+
+- (void)handleTap:(UITapGestureRecognizer *)sender {
+    if (UIGestureRecognizerStateEnded == sender.state) {
+        CGPoint tapPoint = [sender locationInView:self];
+        if (self.cellClickBlock) {
+            self.cellClickBlock(self, [self cellAtPoint:tapPoint]);
+        }
+    }
 }
 
 @end

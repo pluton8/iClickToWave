@@ -15,4 +15,7 @@
 /// An array of waves to display. Must contain Wave objects.
 @property (copy, nonatomic) NSArray *waves;
 
+/// The block is invoked when a cell in this view is clicked.
+@property (copy, nonatomic) void(^cellClickBlock)(WavesView *view, CGPoint cell);
+
 @end

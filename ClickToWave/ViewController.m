@@ -15,22 +15,48 @@ static const int kWaveSpeed = 8;
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSArray *waves;
+@property (strong, nonatomic) NSMutableArray *waves;
 @property (weak, nonatomic) NSTimer *redrawTimer;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - Init
+
+- (void)baseInit {
+    _waves = [@[] mutableCopy];
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self baseInit];
+    }
+    return self;
+}
+
+#pragma mark - View
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    Wave *w = [[Wave alloc] initWithTip:CGPointMake(1, 5)
-                               andColor:[UIColor yellowColor]];
-    Wave *w2 = [[Wave alloc] initWithTip:CGPointMake(0, 3)
-                                andColor:[UIColor greenColor]];
-    self.waves = @[w, w2];
-    self.wavesView.waves = self.waves;
+    __weak typeof(self) wself = self;
+    self.wavesView.cellClickBlock = ^(WavesView *view, CGPoint cell) {
+        Wave *newWave = [[Wave alloc] initWithTip:CGPointMake(0, cell.y)
+                                         andColor:[self randomColor]];
+        typeof(self) sself = wself;
+        [sself.waves addObject:newWave];
+        sself.wavesView.waves = sself.waves;
+    };
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -54,9 +80,33 @@ static const int kWaveSpeed = 8;
     self.redrawTimer = nil;
 }
 
+#pragma mark - Private Methods
+
+- (UIColor *)randomColor {
+    static NSArray *colors = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        colors = @[[UIColor yellowColor],
+                   [UIColor greenColor],
+                   [UIColor redColor],
+                   [UIColor orangeColor],
+                   [UIColor purpleColor],
+                   [UIColor magentaColor],
+                   [UIColor cyanColor],
+                   [UIColor blackColor]];
+    });
+
+    return colors[arc4random() % colors.count];
+}
+
 #pragma mark - Timer
 
 - (void)redrawTimerTick:(NSTimer *)timer {
+    if (self.waves.count <= 0) {
+        // nothing to do yet
+        return;
+    }
+
     for (Wave *wave in self.waves) {
         CGPoint tip = wave.tip;
         ++tip.x;
